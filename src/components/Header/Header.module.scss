@@ -1,0 +1,35 @@
+.header {
+  height: var(--navbar-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+
+  & > :nth-child(1) {
+    flex-basis: 80%;
+  }
+
+  & > :nth-child(2) {
+    flex-basis: 10%;
+  }
+
+  button {
+    padding:  6px 12px;
+    border-radius: var(--border-radius-s);
+    cursor: pointer;
+    font-weight: 600;
+    background-color: var(--dark-background-color);
+  }
+
+  .add-button {
+    background-color: var(--yellow-color);
+    display: flex;
+    align-items: center;
+
+    svg {
+      width: 32px;
+    }
+  }
+}
+

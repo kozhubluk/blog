@@ -1,0 +1,25 @@
+.login {
+  padding: 16px 20px;
+  width: 340px;
+  display: grid;
+
+  input {
+    padding: 6px;
+    border-radius: var(--border-radius-s);
+    background-color: var(--dark-background-color);
+  }
+
+  input[type='text'], input[type='password'] {
+    margin-bottom: 10px;
+  }
+
+  input[type='submit'] {
+    margin-top: 15px;
+    background-color: var(--yellow-color);
+    font-weight: 600;
+
+    &:disabled {
+      opacity: 0.6;
+    }
+  }
+}

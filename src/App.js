@@ -1,4 +1,4 @@
-import './styles/index.scss';
+import './assets/styles/index.scss';
 import { Route, Routes} from "react-router-dom";
 import PostsList from "./components/PostsList/PostsList";
 import Post from "./components/Post/Post";

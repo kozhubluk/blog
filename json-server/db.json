@@ -2,23 +2,28 @@
   "users": [
     {
       "id": "1",
-      "username": "kozhubluk"
+      "username": "kozhubluk",
+      "color": "rgb(69, 88, 97)"
     },
     {
       "id": "2",
-      "username": "Lady Gaga"
+      "username": "Lady Gaga",
+      "color": "rgb(34, 28, 97)"
     },
     {
       "id": "3",
-      "username": "Allo4ka2003"
+      "username": "Allo4ka2003",
+      "color": "rgb(12, 90, 37)"
     },
     {
       "id": "4",
-      "username": "kozhubluk"
+      "username": "Егор Крид",
+      "color": "rgb(18, 30, 27)"
     },
     {
       "id": "5",
-      "username": "Гадалка Тамара"
+      "username": "Гадалка Тамара",
+      "color": "rgb(76, 30, 27)"
     }
   ],
   "posts": [

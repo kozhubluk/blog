@@ -12,14 +12,14 @@
     align-items: center;
     justify-content: center;
 
-    p {
+    > div {
       font-weight: 800;
       font: var(--font-l);
       color: var(--background-color);
     }
   }
 
-  p {
+  .name {
     color: var(--secondary-color);
     display: block;
     font: var(--font-s);
