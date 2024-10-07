@@ -1,0 +1,14 @@
+.post {
+  padding: 10px 160px;
+  display: grid;
+  gap: 10px;
+
+  h1 {
+    font: var(--font-xl);
+    font-weight: bold;
+  }
+
+  img {
+    border-radius: var(--border-radius-m);
+  }
+}

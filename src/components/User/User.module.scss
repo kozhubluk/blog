@@ -1,0 +1,28 @@
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .avatar{
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      font-weight: 800;
+      font: var(--font-l);
+      color: var(--background-color);
+    }
+  }
+
+  p {
+    color: var(--secondary-color);
+    display: block;
+    font: var(--font-s);
+    font-weight: 500;
+  }
+}

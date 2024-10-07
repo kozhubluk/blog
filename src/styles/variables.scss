@@ -1,0 +1,50 @@
+:root {
+  // цвета
+  --secondary-color: rgb(124, 124, 124);
+  --background-color: rgb(255 255 255);
+  --dark-background-color: rgb(227 228 232);
+
+  --primary-color: rgb(0 0 0);
+  --highlighted-primary-color: rgb(19 19 19);
+
+  --error-color: rgb(250 90 85);
+
+  --skeleton-base-color: rgb(233 233 236);
+  --skeleton-shine-color: rgb(245 245 248);
+
+  // Шрифты
+  --font-family: "Mulish", sans-serif;
+  --font-weight: 400;
+
+  // стандартный шрифт
+  --font-size-m: 17px;
+  --font-height-m: 28px;
+  --font-m: var(--font-weight) var(--font-size-m) / var(--font-height-m) var(--font-family);
+
+  // уменьшенный шрифт
+  --font-size-s: 16px;
+  --font-height-s: 24px;
+  --font-s: var(--font-weight) var(--font-size-s) / var(--font-height-s) var(--font-family);
+
+  // увеличенный шрифт
+  --font-size-l: 24px;
+  --font-height-l: 32px;
+  --font-l: var(--font-weight) var(--font-size-l) / var(--font-height-l) var(--font-family);
+
+
+  // увеличенный шрифт х2
+  --font-size-xl: 28px;
+  --font-height-xl: 35px;
+  --font-xl: var(--font-weight) var(--font-size-xl) / var(--font-height-xl) var(--font-family);
+
+  // размерности
+  --sidebar-width: 180px;
+  --sidebar-width-hidden: 50px;
+  --navbar-height: 50px;
+  --border-width: 2.5px;
+
+  // скругления
+  --border-radius-s: 10px;
+  --border-radius-m: 15px;
+  --border-radius-l: 20px;
+}
