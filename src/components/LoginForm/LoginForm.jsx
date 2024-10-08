@@ -1,7 +1,7 @@
 import styles from './LoginForm.module.scss';
-import { useState } from 'react';
+import { memo, useState } from 'react';
 
-const LoginForm = (props) => {
+const LoginForm = memo((props) => {
   const { handleLogin } = props;
 
   const [username, setUsername] = useState('');
@@ -42,6 +42,6 @@ const LoginForm = (props) => {
       <input type="submit" value="Войти" disabled={!username.trim() || !password.trim()} />
     </form>
   );
-};
+});
 
 export default LoginForm;
