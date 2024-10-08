@@ -34,7 +34,7 @@ class CommentsStore {
     const { user, ...body } = newComment;
 
     try {
-      const response = await apiInstance.post(`commesdfnts`, { ...body, userId: user.id });
+      const response = await apiInstance.post(`comments`, { ...body, userId: user.id });
       runInAction(() => {
         const comment = response.data;
         this.comments.push({ ...comment, user: user });
