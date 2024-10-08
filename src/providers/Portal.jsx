@@ -1,7 +1,7 @@
-import { createPortal } from 'react-dom'
+import { createPortal } from 'react-dom';
 
 const Portal = ({ children, domNode = document.body }) => {
-    return createPortal(children, domNode)
-}
+  return createPortal(children, domNode);
+};
 
 export default Portal;

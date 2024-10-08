@@ -1,19 +1,19 @@
-import {useState} from "react";
+import { useState } from 'react';
 
 export const useModal = () => {
-    const [active, setActive] = useState(false);
+  const [active, setActive] = useState(false);
 
-    const open = () => {
-        setActive(true);
-    }
+  const open = () => {
+    setActive(true);
+  };
 
-    const close = () => {
-        setActive(false);
-    }
+  const close = () => {
+    setActive(false);
+  };
 
-    const toggle = () => {
-        setActive(prev => !prev);
-    }
+  const toggle = () => {
+    setActive((prev) => !prev);
+  };
 
-    return {active, open, close, toggle}
-}
+  return { active, open, close, toggle };
+};
