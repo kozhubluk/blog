@@ -1,6 +1,7 @@
 import styles from "./User.module.scss";
+import {memo} from "react";
 
-const User = (props) => {
+const User = memo((props) => {
     const {user} = props;
 
     return <div className={styles.user}>
@@ -11,6 +12,6 @@ const User = (props) => {
         </div>
         <div className={styles.name}>{user?.username}</div>
     </div>
-}
+});
 
 export default User;

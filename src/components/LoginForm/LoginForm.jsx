@@ -21,6 +21,7 @@ const LoginForm = (props) => {
     };
 
     return <form className={styles.login} onSubmit={handleSubmit}>
+        <h2>Войти в аккаунт</h2>
         <label htmlFor='username'>Логин</label>
         <input name='username' placeholder='Введите логин...' type='text' value={username} onChange={handleUsername}/>
         <label htmlFor='password'>Пароль</label>

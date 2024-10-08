@@ -7,8 +7,64 @@ body {
   color: var(--primary-color);
   font-style: normal;
   min-height: 100vh;
+
+  h1 {
+    font: var(--font-xl);
+    font-weight: bold;
+  }
+
+  h2, h3 {
+    font: var(--font-l);
+    font-weight: bold;
+  }
+
+  b {
+    font-weight: bold;
+  }
+
+  form {
+    padding: 16px 20px;
+    display: grid;
+    gap: 4px;
+  }
+
+  input, textarea, button {
+    padding: 6px 12px;
+    border-radius: var(--border-radius-s);
+    background-color: var(--dark-background-color);
+  }
+
+  textarea {
+    resize: none;
+
+    &:focus {
+      border: none;
+    }
+  }
+
+  label {
+    font-weight: 500;
+  }
+
+  input[type='submit'], button {
+    cursor: pointer;
+    font-weight: 600;
+    background-color: var(--dark-background-color);
+
+    &:disabled {
+      opacity: 0.65;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.6;
+  }
 }
 
 .container, header {
-  padding: 10px 15%;
+  padding: 0 15%;
+}
+
+.container {
+  padding: calc(10px + var(--navbar-height)) 15%;
 }

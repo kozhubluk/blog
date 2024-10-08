@@ -1,5 +1,4 @@
 .post {
-  padding: 0 160px;
   display: grid;
   gap: 10px;
 
@@ -9,6 +8,7 @@
   }
 
   img {
+    width: 100%;
     border-radius: var(--border-radius-m);
   }
 }

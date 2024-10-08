@@ -1,0 +1,15 @@
+.comment {
+  display: grid;
+  gap: 4px;
+
+  textarea {
+    background-color: var(--background-color);
+    height: 90px;
+  }
+
+  .group-button {
+    display: flex;
+    gap: 4px;
+  }
+}
+

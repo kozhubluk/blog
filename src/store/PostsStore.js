@@ -49,19 +49,21 @@ class PostsStore {
 
     addPost = async (newPost) => {
         this.status = 'pending';
-        this.error = null;
+        const {user, ...body} = newPost;
+        body.userId = user.id;
 
         try {
-            const response = await apiInstance.post('posts', newPost);
+            const response = await apiInstance.post('posts', body);
             runInAction(() => {
                 const post = response.data;
-                this.posts.push(post);
+                this.posts.push({...post, user});
                 this.status = 'resolve';
+                this.error = null;
             });
         } catch (error) {
             runInAction(() => {
-                this.status = 'reject';
                 this.error = error;
+                this.status = 'reject';
             });
         }
     }
@@ -74,7 +76,7 @@ class PostsStore {
             const response = await apiInstance.put(`posts/${id}`, newPost);
             runInAction(() => {
                 const post = response.data;
-                this.posts = this.posts.map(item => item.id === id ? post : item);
+                this.posts = this.posts.map(item => item.id === id ? {...post, user: item.user} : item);
                 this.status = 'resolve';
             });
         } catch (error) {

@@ -1,14 +1,11 @@
-import {useParams} from "react-router-dom";
 import {useEffect} from "react";
 import {postStore} from "../../store/PostsStore";
 import {observer} from "mobx-react-lite";
 import User from "../User/User";
 import styles from './Post.module.scss'
 
-const Post = observer(() => {
-    const {id} = useParams();
+const Post = observer(({id}) => {
     const {post, isLoading, error, status, getPostById } = postStore;
-    console.log(post);
     useEffect(() => {
         getPostById(id);
     }, []);

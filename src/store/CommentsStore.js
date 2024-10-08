@@ -15,7 +15,7 @@ class CommentsStore {
         this.error = null;
 
         try {
-            const response = await apiInstance.get('comments', {params: {postId}});
+            const response = await apiInstance.get('comments', {params: {postId, '_embed':'user'} });
             runInAction(() => {
                 this.comments = response.data;
                 this.status = 'resolve';
@@ -31,12 +31,13 @@ class CommentsStore {
     addComment = async (newComment) => {
         this.status = 'pending';
         this.error = null;
+        const {user, ...body} = newComment;
 
         try {
-            const response = await apiInstance.post('comments', newComment);
+            const response = await apiInstance.post(`comments`, {...body, userId: user.id});
             runInAction(() => {
                 const comment = response.data;
-                this.comments.push(comment);
+                this.comments.push({...comment, user: user});
                 this.status = 'resolve';
             });
         } catch (error) {
@@ -55,7 +56,7 @@ class CommentsStore {
             const response = await apiInstance.put(`comments/${id}`, newComment);
             runInAction(() => {
                 const comment = response.data;
-                this.comments = this.comments.map(item => item.id === id ? comment : item);
+                this.comments = this.comments.map(item => item.id === id ? {...comment, user: item.user} : item);
                 this.status = 'resolve';
             });
         } catch (error) {
@@ -73,7 +74,7 @@ class CommentsStore {
         try {
             const response = await apiInstance.delete(`comments/${id}`);
             runInAction(() => {
-                this.posts = this.posts.filter(item => item.id !== id);
+                this.comments = this.comments.filter(item => item.id !== id);
                 this.status = 'resolve';
             });
         } catch (error) {
@@ -84,3 +85,5 @@ class CommentsStore {
         }
     }
 }
+
+export const commentsStore = new CommentsStore();

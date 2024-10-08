@@ -4,7 +4,6 @@ import styles from './Modal.module.scss'
 
 const Modal = (props) => {
     const { children, isOpen, onClose } = props
-    console.log(isOpen);
 
     const [isMounted, setIsMounted] = useState(false);
 

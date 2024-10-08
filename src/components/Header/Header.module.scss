@@ -1,6 +1,10 @@
 .header {
   height: var(--navbar-height);
   display: flex;
+  position: fixed;
+  z-index: 90;
+  background-color: var(--background-color);
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
@@ -12,14 +16,6 @@
 
   & > :nth-child(2) {
     flex-basis: 10%;
-  }
-
-  button {
-    padding:  6px 12px;
-    border-radius: var(--border-radius-s);
-    cursor: pointer;
-    font-weight: 600;
-    background-color: var(--dark-background-color);
   }
 
   .add-button {

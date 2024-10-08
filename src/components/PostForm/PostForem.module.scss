@@ -1,16 +1,24 @@
-.login {
-  width: 340px;
+.form {
+  width: 460px;
 
   h2 {
     text-align: center;
   }
 
-  input[type='text'], input[type='password'] {
+  textarea {
+    height: 100px;
+  }
+
+  input[type='text'], textarea {
     margin-bottom: 10px;
   }
 
   input[type='submit'] {
     margin-top: 15px;
     background-color: var(--yellow-color);
+  }
+
+  .error {
+    color: var(--error-color);
   }
 }
