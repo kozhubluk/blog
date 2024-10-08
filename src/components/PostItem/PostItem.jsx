@@ -2,8 +2,9 @@ import { NavLink } from 'react-router-dom';
 import styles from './PostItem.module.scss';
 import { observer } from 'mobx-react-lite';
 import User from '../User/User';
-import { ReactComponent as EditIcon } from '../../assets/svg/edit.svg';
-import { ReactComponent as DeleteIcon } from '../../assets/svg/remove.svg';
+import { ReactComponent as EditIcon } from '../../assets/images/edit.svg';
+import { ReactComponent as DeleteIcon } from '../../assets/images/remove.svg';
+import Image from '../../assets/images/default-image-icon-vector-missing-picture-page-website-design-mobile-app-no-photo-available_87543-11093.jpg';
 
 const PostItem = observer((props) => {
   const { post, user, onEdit, onDelete } = props;
@@ -32,8 +33,10 @@ const PostItem = observer((props) => {
       )}
 
       <div className={styles.preview}>
-        {!!post.image && (
+        {!!post.image ? (
           <img alt="Изображение к посту" className={styles.image} src={post.image} />
+        ) : (
+          <img alt="Пост" className={styles.image} src={Image} />
         )}
       </div>
       <div className={styles.details}>

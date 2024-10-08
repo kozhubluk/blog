@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import styles from './PostForem.module.scss';
+import styles from './PostForm.module.scss';
 import { observer } from 'mobx-react-lite';
 
 const PostForm = observer((props) => {

@@ -51,27 +51,6 @@
       "userId": "3",
       "title": "Что-то нашли на Луне)",
       "content": "На Луне нашли пещеру, которая могла бы стать базой для человека! Я в шоке..."
-    },
-    {
-      "id": "1cb5",
-      "title": "ыва",
-      "content": "ываыва",
-      "image": "",
-      "userId": "1"
-    },
-    {
-      "id": "db00",
-      "title": "sdf",
-      "content": "sdf",
-      "image": "ff",
-      "userId": "1"
-    },
-    {
-      "id": "d159",
-      "title": "sdf",
-      "content": "sdf",
-      "image": "",
-      "userId": "1"
     }
   ],
   "comments": [
@@ -100,39 +79,9 @@
       "id": "5b4b"
     },
     {
-      "id": "2a8f",
-      "postId": "5",
-      "text": "dsfsdf",
-      "userId": "1"
-    },
-    {
-      "id": "c5b2",
-      "postId": "2",
-      "text": "sdfsdf",
-      "userId": "1"
-    },
-    {
-      "userId": "1",
-      "postId": "2",
-      "text": "sdfsdfssdf  df",
-      "id": "fdc5"
-    },
-    {
-      "id": "fb2d",
-      "postId": "2",
-      "text": "sdfsdf",
-      "userId": "1"
-    },
-    {
-      "userId": "1",
-      "postId": "2",
-      "text": "dsf",
-      "id": "de07"
-    },
-    {
-      "id": "1f66",
-      "postId": "2",
-      "text": "sdfsdf",
+      "id": "1da6",
+      "postId": "3",
+      "text": "Я ПЕРВЫЙ!!",
       "userId": "1"
     }
   ]

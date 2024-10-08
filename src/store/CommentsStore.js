@@ -34,7 +34,7 @@ class CommentsStore {
     const { user, ...body } = newComment;
 
     try {
-      const response = await apiInstance.post(`comments`, { ...body, userId: user.id });
+      const response = await apiInstance.post(`commesdfnts`, { ...body, userId: user.id });
       runInAction(() => {
         const comment = response.data;
         this.comments.push({ ...comment, user: user });
@@ -74,7 +74,7 @@ class CommentsStore {
     this.error = null;
 
     try {
-      const response = await apiInstance.delete(`comments/${id}`);
+      await apiInstance.delete(`comments/${id}`);
       runInAction(() => {
         this.comments = this.comments.filter((item) => item.id !== id);
         this.status = 'resolve';

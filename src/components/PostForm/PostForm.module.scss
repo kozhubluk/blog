@@ -9,7 +9,8 @@
     height: 100px;
   }
 
-  input[type='text'], textarea {
+  input[type='text'],
+  textarea {
     margin-bottom: 10px;
   }
 
@@ -20,5 +21,11 @@
 
   .error {
     color: var(--error-color);
+  }
+}
+
+@media (max-width: 600px) {
+  .form {
+    width: 100%;
   }
 }

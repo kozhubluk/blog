@@ -2,5 +2,11 @@
   display: grid;
   gap: 24px;
   justify-content: space-between;
-  grid-template-columns: 1fr 1fr 1fr;;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+@media (max-width: 600px) {
+  .posts {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
 }

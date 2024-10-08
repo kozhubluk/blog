@@ -1,6 +1,6 @@
 import styles from './CommentItem.module.scss';
 import User from '../User/User';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { observer } from 'mobx-react-lite';
 
 const CommentItem = observer((props) => {
@@ -8,6 +8,14 @@ const CommentItem = observer((props) => {
     props;
 
   const [commentValue, setCommentValue] = useState(comment?.text || '');
+  const textarea = useRef(null);
+
+  useEffect(() => {
+    if (textarea?.current) {
+      if (editComment.id === comment.id);
+      textarea.current.focus();
+    }
+  }, [comment.id, editComment.id, editedComment, textarea]);
 
   useEffect(() => {
     setCommentValue(comment.text);
@@ -51,6 +59,7 @@ const CommentItem = observer((props) => {
       ) : (
         <>
           <textarea
+            ref={textarea}
             placeholder="Введите комментарий..."
             value={commentValue}
             onChange={onChangeComment}

@@ -1,5 +1,28 @@
 .post-content {
   padding: 0 160px;
   display: grid;
+  margin: auto;
   gap: 16px;
+}
+
+@media (min-width: 1900px) {
+  .post-content {
+    padding: 0 calc((100% - 1000px) / 2);
+  }
+}
+
+@media (max-width: 1200px) {
+  .post-content {
+    padding: 0 10%;
+    display: grid;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .post-content {
+    padding: 0 10px;
+    display: grid;
+    gap: 16px;
+  }
 }

@@ -16,12 +16,15 @@ const PostsList = observer(() => {
   const [editedPost, setEditedPost] = useState(null);
   const { active, close, open } = useModal();
 
-  const editPost = async (title, content, image) => {
-    if (editedPost) {
-      await updatePost(editedPost.id, { title, content, image, userId: user.id });
-      if (postStore.status === 'resolve') close();
-    }
-  };
+  const editPost = useCallback(
+    async (title, content, image) => {
+      if (editedPost) {
+        await updatePost(editedPost.id, { title, content, image, userId: user.id });
+        if (postStore.status === 'resolve') close();
+      }
+    },
+    [close, editedPost, updatePost, user?.id],
+  );
 
   const onEditPost = useCallback(
     (post) => {
@@ -50,15 +53,17 @@ const PostsList = observer(() => {
     <div className={styles.posts}>
       {posts.length === 0
         ? null
-        : posts.map((post) => (
-            <PostItem
-              key={post.id}
-              post={post}
-              user={user}
-              onEdit={onEditPost}
-              onDelete={deletePost}
-            />
-          ))}
+        : posts
+            .map((post) => (
+              <PostItem
+                key={post.id}
+                post={post}
+                user={user}
+                onEdit={onEditPost}
+                onDelete={deletePost}
+              />
+            ))
+            .reverse()}
       <Modal isOpen={active} onClose={close}>
         <PostForm
           submitAction={editPost}

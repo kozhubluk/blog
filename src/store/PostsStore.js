@@ -16,7 +16,9 @@ class PostsStore {
     this.error = null;
 
     try {
-      const response = await apiInstance.get('posts', { params: { _embed: 'user' } });
+      const response = await apiInstance.get('posts', {
+        params: { _embed: 'user' },
+      });
       runInAction(() => {
         this.posts = response.data;
         this.status = 'resolve';
@@ -34,7 +36,9 @@ class PostsStore {
     this.error = null;
 
     try {
-      const response = await apiInstance.get(`posts/${id}`, { params: { _embed: 'user' } });
+      const response = await apiInstance.get(`posts/${id}`, {
+        params: { _embed: 'user' },
+      });
       runInAction(() => {
         this.post = response.data;
         this.status = 'resolve';
@@ -94,7 +98,7 @@ class PostsStore {
     this.error = null;
 
     try {
-      const response = await apiInstance.delete(`posts/${id}`);
+      await apiInstance.delete(`posts/${id}`);
       runInAction(() => {
         this.posts = this.posts.filter((item) => item.id !== id);
         this.status = 'resolve';

@@ -3,8 +3,9 @@ import { useState } from 'react';
 import { observer } from 'mobx-react-lite';
 
 const CommentForm = observer((props) => {
-  const { addComment, status } = props;
+  const { addComment, status, onFocus } = props;
   const [comment, setComment] = useState('');
+
   const handleComment = (e) => {
     setComment(e.target.value);
   };
@@ -22,6 +23,7 @@ const CommentForm = observer((props) => {
           value={comment}
           placeholder="Введите свой комментарий..."
           onChange={handleComment}
+          onFocus={onFocus}
         />
         <input type="submit" value="Отправить" disabled={status === 'pending' || !comment.trim()} />
       </form>

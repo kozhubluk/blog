@@ -5,12 +5,19 @@
     text-align: center;
   }
 
-  input[type='text'], input[type='password'] {
+  input[type='text'],
+  input[type='password'] {
     margin-bottom: 10px;
   }
 
   input[type='submit'] {
     margin-top: 15px;
     background-color: var(--yellow-color);
+  }
+}
+
+@media (max-width: 500px) {
+  .form {
+    width: 100%;
   }
 }

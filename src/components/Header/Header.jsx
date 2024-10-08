@@ -1,7 +1,7 @@
 import { useAuth } from '../../providers/AuthProvider';
 import { NavLink } from 'react-router-dom';
 import styles from './Header.module.scss';
-import { ReactComponent as PlusIcon } from '../../assets/svg/add.svg';
+import { ReactComponent as PlusIcon } from '../../assets/images/add.svg';
 import { useModal } from '../../hooks/useModal';
 import Modal from '../Modal/Modal';
 import LoginForm from '../LoginForm/LoginForm';

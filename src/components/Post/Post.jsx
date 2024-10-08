@@ -3,6 +3,7 @@ import { postStore } from '../../store/PostsStore';
 import { observer } from 'mobx-react-lite';
 import User from '../User/User';
 import styles from './Post.module.scss';
+import PostSkeleton from './PostSkeleton';
 
 const Post = observer(({ id }) => {
   const { post, status, getPostById } = postStore;
@@ -10,7 +11,7 @@ const Post = observer(({ id }) => {
     getPostById(id);
   }, [getPostById, id]);
 
-  if (status === 'pending') return <div>123</div>;
+  if (status === 'pending' && !Object.keys(post).length) return <PostSkeleton />;
 
   return (
     <div className={styles.post}>

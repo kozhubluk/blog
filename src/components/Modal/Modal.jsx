@@ -1,4 +1,4 @@
-import { useCallback, useState, useEffect } from 'react';
+import { useCallback, useEffect } from 'react';
 import Portal from '../../providers/Portal';
 import styles from './Modal.module.scss';
 
